@@ -1,0 +1,13 @@
+x-input-text {
+  display: block;
+
+  input {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: var(--theme-background-color-glass);
+    border: 1px solid;
+    border-radius: var(--theme-border-radius);
+    padding: var(--theme-padding-xs) var(--theme-padding-sm);
+  }
+}

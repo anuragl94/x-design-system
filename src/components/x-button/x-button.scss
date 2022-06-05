@@ -1,0 +1,23 @@
+x-button {
+  display: inline-block;
+
+  button {
+    position: relative;
+    min-width: 6em;
+    border-radius: var(--theme-border-radius);
+    padding: var(--theme-padding-xs) var(--theme-padding-sm);
+    font-size: inherit;
+    color: var(--theme-font-color-inverted);
+    cursor: pointer;
+    border: 1px solid;
+    overflow: hidden;
+  
+    &[type="submit"] {
+      background-color: var(--theme-primary-color);
+    }
+  }
+
+  .invisible {
+    visibility: hidden;
+  }
+}

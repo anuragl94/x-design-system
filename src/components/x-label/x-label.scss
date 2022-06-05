@@ -1,0 +1,15 @@
+x-label {
+  display: inline-block;
+
+  label > div:first-child {
+    margin-bottom: 8px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .error-text {
+    font-size: var(--theme-font-size-sm);
+    color: var(--theme-negative-color);
+    margin-top: 4px;
+  }
+}

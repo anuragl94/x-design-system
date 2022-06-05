@@ -1,0 +1,47 @@
+x-loader {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--theme-background-color-glass);
+
+  div {
+    display: block;
+    height: 1px;
+    width: 1px;
+    border: 3px solid;
+    border-radius: 2px;
+    transform: translateY(0%);
+    animation: verticalwave 1s ease-in-out;
+    animation-iteration-count: infinite;
+
+    @for $i from 1 through 5 {
+      &:nth-child(#{$i}) {
+        animation-delay: #{$i * 150 - 150}ms;
+      }
+    }
+  }
+
+  @keyframes verticalwave {
+    from {
+      transform: translateY(0%);
+    }
+
+    12% {
+      transform: translateY(50%);
+    }
+
+    38% {
+      transform: translateY(-50%);
+    }
+
+    50% {
+      transform: translateY(0%);
+    }
+  }
+}

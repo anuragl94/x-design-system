@@ -1,0 +1,14 @@
+x-header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  height: var(--theme-header-height);
+  align-items: center;
+  width: 100%;
+  background-color: var(--theme-background-color);
+  padding-inline: var(--theme-padding-md);
+
+  & ~ main, & ~ nav {
+    margin-top: var(--theme-header-height);
+  }
+}

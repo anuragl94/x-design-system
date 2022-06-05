@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <title>Stencil Component Starter</title>
+
+  <script type="module" src="/build/zs-design-system.esm.js"></script>
+  <script nomodule src="/build/zs-design-system.js"></script>
+  <style>
+    /* these are styles you'd probably have in your app */
+    body {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      font-family: var(--theme-font-family, system-ui);
+      color: var(--theme-font-color, #000);
+      overflow-y: hidden;
+    }
+
+    body * {
+      box-sizing: inherit;
+      font-family: inherit;
+    }
+
+    main {
+      height: calc(100vh - var(--theme-header-height));
+      overflow-y: auto;
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+    }
+
+    x-page {
+      scroll-snap-align: start;
+    }
+
+    #header-logo {
+      font-size: 1.4em;
+      font-weight: 600;
+      cursor: pointer;
+      padding-inline: 20px;
+      margin-inline: -20px;
+    }
+
+    /* these styles DEFINITELY belong to the app, but I didn't know where to place them */
+    body {
+      font-size: var(--theme-font-size-root);
+    }
+
+    [inert] {
+      opacity: 0.7;
+    }
+  </style>
+</head>
+
+<body>
+  <x-header>
+    <div id="header-logo" style="transform: translateX(-4px);">📖 Design Handbook</div>
+  </x-header>
+  <x-nav>
+    <a href="#page-intro">Intro</a>
+    <a href="#page-forms">Forms</a>
+    <a href="#page-layout">Layout</a>
+    <a href="#page-i18n">Internationalization</a>
+    <a href="#page-end">Conclusion</a>
+  </x-nav>
+  <main>
+    <x-page id="page-intro">
+      <h1>Intro</h1>
+      <p>Welcome. This application in itself is a demo. Please use developer tools liberally.</p>
+    </x-page>
+    <x-page id="page-forms">
+      <h1>Forms</h1>
+      <x-form id="test-form" submitlabel="Submit">
+        <x-label text="Text input disabled" inert>
+          <x-input-text
+            name="text-input-1"
+            value=""
+            placeholder="Placeholder"
+          />
+        </x-label>
+        <x-label text="Text input empty">
+          <x-input-text
+            name="text-input-2"
+            value=""
+            placeholder="Enter something"
+          />
+        </x-label>
+        <x-label text="Text input with text">
+          <x-input-text
+            name="text-input-3"
+            value="Jalapeño"
+          />
+        </x-label>
+        <x-label text="Text input with error">
+          <x-input-text
+            value=""
+            name="text-input-4"
+            placeholder="Leave this empty"
+            required
+          />
+        </x-label>
+      </x-form>
+    </x-page>
+    <x-page id="page-layout">
+      <h1>Layout</h1>
+      <p>Don't define layouts inside HTML markup. Use CSS Grids to your advantage in order to be able to support
+        responsiveness</p>
+    </x-page>
+    <x-page id="page-i18n">
+      <h1>Internationalization (i18n)</h1>
+      <p>Yeah, we don't support that yet.</p>
+    </x-page>
+    <x-page id="page-end">
+      <h1>Conclusion</h1>
+      <p>Thanks for reading. Now buy me a slice of 🍕.</p>
+    </x-page>
+  </main>
+  <script>
+    function wait(delay) {
+      return new Promise((resolve, reject) => {
+        window.setTimeout(resolve, delay);
+      });
+    }
+
+    document.querySelector("#test-form").addEventListener("submit", async function (e) {
+      const form = e.target;
+      console.log("Submitting", await (e.target.serialize()));
+      form.submitting = true;
+      await wait(3000);
+      console.log("Submitted");
+      form.submitting = false;
+    });
+
+    window.addEventListener("load", () => {
+      window.setTimeout(() => {
+        // the strangest code I have ever written
+        window.location.href = window.location.href;
+      }, 50);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+x-form {
+  display: block;
+
+  .form-section {
+    margin-inline: calc(0px - var(--theme-margin-xs));
+    margin-top: calc(0px - var(--theme-margin-md));
+
+    &:not(:last-child) {
+      margin-bottom: var(--theme-margin-md);
+    }
+
+    & > * {
+      margin-top: var(--theme-margin-md);
+      vertical-align: top;
+      margin-inline: var(--theme-margin-xs);
+    }
+  }
+}

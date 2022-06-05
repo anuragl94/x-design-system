@@ -1,0 +1,17 @@
+x-page {
+  display: block;
+  height: calc(100%);
+  background-color: var(--theme-background-color);
+
+  .page-content {
+    padding: var(--theme-padding-md, 20px);
+    background-color: var(--theme-background-color, #fff);
+    min-height: 100%;
+    // max-width: 1366px;
+    // margin-inline: auto;
+
+    & > :first-child {
+      margin-top: 0;
+    }
+  }
+}

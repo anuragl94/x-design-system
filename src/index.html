@@ -136,7 +136,9 @@
     window.addEventListener("load", () => {
       window.setTimeout(() => {
         // the strangest code I have ever written
-        window.location.href = window.location.href;
+        if (window.location.hash) {
+          window.location.href = window.location.href;
+        }
       }, 50);
     });
   </script>

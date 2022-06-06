@@ -1,7 +1,8 @@
 {
-  "name": "zs-design-system",
+  "name": "@anurag-zs/x-design-system",
   "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "author": "Anurag <anuragl94@users.noreply.github.com>",
+  "description": "A Design System built on Stenciljs",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "es2015": "dist/esm/index.mjs",
@@ -9,10 +10,10 @@
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/zs-design-system/zs-design-system.esm.js",
+  "unpkg": "dist/x-design-system/x-design-system.esm.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ionic-team/stencil-component-starter.git"
+    "url": "git+https://github.com/anuragl94/x-design-system.git"
   },
   "files": [
     "dist/",
@@ -35,5 +36,9 @@
     "jest-cli": "^27.4.5",
     "puppeteer": "^14.2.1"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anuragl94/x-design-system/issues"
+  },
+  "homepage": "https://github.com/anuragl94/x-design-system#readme"
 }

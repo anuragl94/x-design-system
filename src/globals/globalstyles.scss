@@ -24,20 +24,20 @@ $color-light-coral: #ef7678;
   --theme-font-size-sm: 0.8rem;
   --theme-font-size-lg: 1.2rem;
 
-  --theme-margin-lg: 36px;
+  --theme-margin-lg: 32px;
   --theme-margin-md: 24px;
-  --theme-margin-sm: 12px;
-  --theme-margin-xs: 6px;
-  --theme-padding-lg: 36px;
+  --theme-margin-sm: 16px;
+  --theme-margin-xs: 8px;
+  --theme-padding-lg: 32px;
   --theme-padding-md: 24px;
-  --theme-padding-sm: 12px;
-  --theme-padding-xs: 6px;
+  --theme-padding-sm: 16px;
+  --theme-padding-xs: 8px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --theme-font-color: #{$color-light-gray};
-    --theme-font-color-inverse: #{$color-light-gray};
+    --theme-font-color-inverted: #{$color-light-gray};
     --theme-background-color: #{$color-dark-gray};
   }
 }

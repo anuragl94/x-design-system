@@ -2,7 +2,7 @@ import { Config } from "@stencil/core";
 import { sass } from "@stencil/sass";
 
 export const config: Config = {
-  namespace: "zs-design-system",
+  namespace: "x-design-system",
   outputTargets: [
     {
       type: "dist",
@@ -19,11 +19,11 @@ export const config: Config = {
       serviceWorker: null, // disable service workers
     },
   ],
+  globalStyle: "src/globals/globalStyles.scss",
   plugins: [
-    sass({
-      injectGlobalPaths: [
-        "src/globals/variables.scss",
-      ]
-    })
+    sass()
   ],
+  devServer: {
+    openBrowser: false
+  }
 };

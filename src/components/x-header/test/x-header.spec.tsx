@@ -9,9 +9,7 @@ describe('x-header', () => {
     });
     expect(page.root).toEqualHtml(`
       <x-header>
-        <mock:shadow-root>
-          <slot></slot>
-        </mock:shadow-root>
+        <header></header>
       </x-header>
     `);
   });

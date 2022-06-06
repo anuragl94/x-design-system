@@ -29,7 +29,7 @@ export class XLabel {
 
   async #populateErrors() {
     // @ts-ignore
-    const validity = await this.input.getValidity();
+    const validity = await this.input?.getValidity();
     this.errors = [
       validity.valueMissing && ERROR_STRINGS.REQUIRED
     ].filter(Boolean);

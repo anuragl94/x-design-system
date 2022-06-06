@@ -9,9 +9,10 @@ describe('x-loader', () => {
     });
     expect(page.root).toEqualHtml(`
       <x-loader>
-        <mock:shadow-root>
-          <slot></slot>
-        </mock:shadow-root>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
       </x-loader>
     `);
   });

@@ -9,9 +9,9 @@ describe('x-button', () => {
     });
     expect(page.root).toEqualHtml(`
       <x-button>
-        <mock:shadow-root>
-          <slot></slot>
-        </mock:shadow-root>
+        <button type="button">
+          <span></span>
+        </button>
       </x-button>
     `);
   });

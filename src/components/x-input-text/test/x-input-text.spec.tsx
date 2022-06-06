@@ -9,9 +9,7 @@ describe('x-input-text', () => {
     });
     expect(page.root).toEqualHtml(`
       <x-input-text>
-        <mock:shadow-root>
-          <slot></slot>
-        </mock:shadow-root>
+        <input type="text">
       </x-input-text>
     `);
   });

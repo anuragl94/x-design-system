@@ -1,17 +1,19 @@
 import { newSpecPage } from '@stencil/core/testing';
 import { XLabel } from '../x-label';
+import { XInputText } from '../../x-input-text/x-input-text';
 
 describe('x-label', () => {
   it('renders', async () => {
     const page = await newSpecPage({
-      components: [XLabel],
-      html: `<x-label></x-label>`,
+      components: [XInputText, XLabel],
+      html: `<x-label><x-input-text /></x-label>`,
     });
     expect(page.root).toEqualHtml(`
       <x-label>
-        <mock:shadow-root>
-          <slot></slot>
-        </mock:shadow-root>
+        <div></div>
+        <x-input-text>
+          <input type="text">
+        </x-input-text>
       </x-label>
     `);
   });

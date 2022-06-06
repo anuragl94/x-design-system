@@ -7,12 +7,9 @@ describe('x-nav', () => {
       components: [XNav],
       html: `<x-nav></x-nav>`,
     });
-    expect(page.root).toEqualHtml(`
-      <x-nav>
-        <mock:shadow-root>
-          <slot></slot>
-        </mock:shadow-root>
-      </x-nav>
-    `);
+    expect(page.root).toEqualHtml(
+      `<x-nav>
+      </x-nav>`
+    );
   });
 });
